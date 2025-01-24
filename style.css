@@ -1,0 +1,134 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #1b1b2f;
+    color: #fff;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #0f0f1e;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* Header Navigation */
+.header-nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 10px 0;
+}
+
+.header-nav ul li {
+    margin: 0 20px;
+}
+
+.header-nav ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 16px;
+    padding: 5px 10px;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.3s ease;
+}
+
+.header-nav ul li a:hover {
+    border-bottom: 2px solid #00adb5;
+}
+
+/* Informatics Section */
+.informatics {
+    padding: 50px 20px;
+    text-align: center;
+    background: radial-gradient(circle, #0f0f1e, #1b1b2f);
+}
+
+.informatics h1 {
+    font-size: 3rem;
+    color: #fa0909;
+    margin-bottom: 10px;
+    opacity: 0;
+    animation: fadeIn 2s forwards 0.5s;
+}
+
+.informatics h2 {
+    font-size: 1.8rem;
+    color: #d3d3d3;
+    font-weight: 300;
+    letter-spacing: 1px;
+    opacity: 0;
+    animation: fadeIn 2s forwards 1s;
+}
+
+.informatics p {
+    max-width: 800px;
+    margin: 0 auto;
+    color: #d3d3d3;
+    line-height: 1.8;
+    opacity: 0;
+    animation: fadeIn 2s forwards 1.5s;
+}
+
+.informatics img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover; /* Pastikan gambar tetap proporsional */
+    border-radius: 50%; /* Membuat gambar berbentuk bulat */
+    margin: 5px; /* Margin untuk jarak kecil di sekitar gambar */
+    opacity: 0;
+    animation: fadeIn 2s forwards 2s;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Opsional: Tambahkan bayangan agar lebih menonjol */
+}
+
+
+
+.informatics a {
+    color: #fa0909;
+    text-decoration: none;
+}
+
+.informatics a:hover {
+    text-decoration: underline;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px; /* Ukuran tombol */
+    background-color: #080808; /* Warna tombol */
+    color: #f7f6f6; /* Warna teks */
+    text-decoration: none; /* Hilangkan garis bawah pada link */
+    font-size: 1rem; /* Ukuran font */
+    font-weight: bold; /* Tebalkan teks */
+    border-radius: 5px; /* Sudut melengkung */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Animasi efek */
+}
+
+.button:hover {
+    background-color: #f8dcdc; /* Warna saat hover */
+    transform: scale(1.05); /* Efek memperbesar sedikit */
+}
+
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background: #0f0f1e;
+    color: #d3d3d3;
+    font-size: 14px;
+}
+
+/* Animasi Fade In */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

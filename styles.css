@@ -1,0 +1,408 @@
+/* General Styles */
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #1b1b2f;
+  color: #fff;
+  line-height: 1.6;
+}
+
+header {
+  background-color: #0f0f1e;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* Header Navigation */
+.header-nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 10px 0;
+}
+
+.header-nav ul li {
+  margin: 0 20px;
+}
+
+.header-nav ul li a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 16px;
+  padding: 5px 10px;
+  border-bottom: 2px solid transparent;
+  transition: border-bottom 0.3s ease;
+}
+
+.header-nav ul li a:hover {
+  border-bottom: 2px solid #00adb5;
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 150px 20px;
+  background: radial-gradient(circle, #0f0f1e, #1b1b2f);
+  background-image: url('konstelasi.png'); /* Adjust with your file */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.hero .container {
+  position: relative;
+  z-index: 2;
+}
+
+.hero h1 {
+  font-size: 4rem;
+  letter-spacing: 5px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 20px;
+  opacity: 0;
+  animation: fadeIn 2s forwards 0.5s;
+}
+
+.hero h2 {
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: #d3d3d3;
+  letter-spacing: 2px;
+  opacity: 0;
+  animation: fadeIn 2s forwards 1s;
+}
+
+.hero p {
+  opacity: 0;
+  animation: fadeIn 2s forwards 1.5s;
+}
+
+.hero img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  margin-top: 20px;
+  opacity: 0;
+  animation: fadeIn 2s forwards 2s;
+}
+
+.scroll-arrow a {
+  font-size: 2rem;
+  color: #00adb5;
+  text-decoration: none;
+  margin-top: 20px;
+  display: block;
+  opacity: 0;
+  animation: fadeIn 2s forwards 2.5s;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+
+
+/* About Section */
+.about {
+  padding: 50px 50px;
+  text-align: center;
+}
+
+.about-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 80px; /* Menambah jarak antar elemen */
+  flex-wrap: wrap; /* Memastikan elemen akan wrap jika layar kecil */
+}
+
+.about-text {
+  flex: 1;
+  text-align: center;
+  padding: 60px; /* Memberikan padding agar teks tidak terlalu menempel pada sisi */
+}
+
+.about-image {
+  flex: 1;
+  text-align: left;
+}
+
+.about-image img {
+  width: 350px; /* Ukuran gambar */
+  height: 400px; /* Ukuran gambar */
+  object-fit: contain;
+  border-radius: 10%; /* Membuat gambar berbentuk lingkaran */
+  opacity: 0;
+  animation: fadeIn 2s forwards 1s; /* Animasi fade-in dengan delay */
+}
+
+.about h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.about p {
+  max-width: 600px;
+  margin: 0 auto;
+  color: #d3d3d3;
+  line-height: 1.8; /* Menambah jarak antar baris untuk keterbacaan */
+}
+
+/* Animasi Fade In */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.skills {
+  padding: 50px 20px; /* Jarak keseluruhan pada section */
+  text-align: center;
+}
+
+.skill-list {
+  display: grid; /* Gunakan grid untuk tata letak */
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Membuat kotak responsif */
+  gap: 20px; /* Jarak antar kotak */
+  justify-content: center;
+  margin-top: 30px; /* Jarak dari judul ke daftar skills */
+}
+
+.skill-item {
+  max-width: 250px; /* Membatasi lebar maksimum kotak */
+  padding: 15px; /* Mengurangi jarak dalam kotak */
+  background-color: #1b1b2f;
+  border-radius: 10px; /* Membuat sudut kotak melengkung */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  color: #d3d3d3;
+  margin: 0 auto; /* Memastikan kotak tetap di tengah */
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.skill-item:hover {
+  transform: scale(1.05); /* Efek zoom saat hover */
+  background-color: #00adb5; /* Warna berubah saat hover */
+  color: #ffffff; /* Warna teks menjadi putih saat hover */
+}
+
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}
+
+
+/* Projects Section */
+.projects {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.project-list {
+  display: flex; /* Menggunakan Flexbox untuk tata letak horizontal */
+  justify-content: space-between; /* Memberikan jarak antar proyek */
+  flex-wrap: wrap; /* Memungkinkan proyek untuk wrap jika layar kecil */
+  gap: 20px; /* Menambahkan jarak antara setiap proyek */
+}
+
+.project {
+  background: #0f0f1e;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  width: 25%; /* Lebar proyek akan 30% dari lebar container */
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project img {
+  width: 100%; /* Gambar akan mengisi lebar penuh kontainer */
+  height: 200px; /* Menetapkan tinggi gambar agar sama di semua proyek */
+  object-fit: cover; /* Menjaga gambar tetap terisi penuh tanpa distorsi */
+  border-radius: 10px;
+}
+
+.project:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.project h3 {
+  font-size: 1.25rem;
+  margin-top: 15px;
+}
+
+.project p {
+  color: #d3d3d3;
+  line-height: 1.6;
+}
+
+/* Animasi Fade In */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.scroll-arrow a {
+  font-size: 2rem;
+  color: #00adb5;
+  text-decoration: none;
+  margin-top: 20px;
+  display: block;
+  opacity: 0;
+  animation: fadeIn 2s forwards 2s;
+}
+
+/* Contact Section */
+.contact {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.contact h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  opacity: 0;
+  animation: fadeIn 2s forwards 0.5s;
+}
+
+.contact p {
+  max-width: 600px;
+  margin: 0 auto;
+  color: #d3d3d3;
+  opacity: 0;
+  animation: fadeIn 2s forwards 1s;
+}
+
+.contact .social-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px; /* Jarak antara grup sosial media dan kontak info */
+}
+
+.social-media {
+  display: flex;
+  flex-wrap: wrap; /* Membuat layout tetap responsif */
+  justify-content: center;
+  gap: 15px; /* Jarak antar platform media sosial */
+}
+
+.social-media a {
+  text-decoration: none;
+  color: #00adb5;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+.social-media a:hover {
+  color: #ffffff;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column; /* Nomor HP dan email vertikal */
+  align-items: center; /* Rata tengah */
+  gap: 5px; /* Jarak antara nomor HP dan email */
+}
+
+.contact-info a {
+  text-decoration: none;
+  color: #d3d3d3;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.contact-info a:hover {
+  color: #ffffff;
+}
+
+.skills {
+    padding: 50px 20px; /* Jarak keseluruhan pada section */
+    text-align: center;
+    margin-bottom: 0; /* Pastikan margin bawah tidak menyebabkan masalah */
+}
+
+.skill-list {
+    display: grid; /* Gunakan grid untuk tata letak */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Membuat kotak responsif */
+    gap: 20px; /* Jarak antar kotak */
+    justify-content: center;
+    margin-top: 60px; /* Jarak dari judul ke daftar skills */
+}
+
+.skill-item {
+    max-width: 250px;
+    padding: 15px;
+    background-color: #1b1b2f;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    color: #d3d3d3;
+    margin: 0 auto; /* Memastikan kotak tetap di tengah */
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    overflow: hidden; /* Pastikan tidak ada elemen yang meluap */
+}
+
+.skill-item i {
+    font-size: 40px;
+    margin-bottom: 10px;
+    color: #00adb5;
+    transition: color 0.3s ease;
+}
+
+.skill-item:hover {
+    transform: scale(1.05);
+    background-color: #00adb5;
+    color: #ffffff;
+}
+
+.arrow-down {
+    text-align: center;
+    margin: 20px 0;
+    padding: 0;
+}
+
+.arrow-down a {
+    display: inline-block;
+    color: #00adb5;
+    font-size: 40px;
+    transition: transform 0.3s ease, color 0.3s ease;
+    text-decoration: none;
+}
+
+.arrow-down a:hover {
+    color: #ffffff;
+    transform: translateY(5px);
+}
+
+
+
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #0f0f1e;
+  color: #d3d3d3;
+  font-size: 14px;
+}
